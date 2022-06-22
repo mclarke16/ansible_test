@@ -18,9 +18,10 @@
     apt:
       name: apache2
       state: latest
+    when: ansible_distribution in ["Debian","Ubuntu"]
 
   - name: Add PHP suppport for apache
     apt:
       name: libapache2-mod-php
       state: latest
-
+    when: ansible_distribution in ["Debian","Ubuntu"]
